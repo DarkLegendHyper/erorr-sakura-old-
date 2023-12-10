@@ -5,8 +5,8 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 //import { plugins } from '../lib/plugins.js'
 let tags = {
-  'main': 'ACERCA DE',
-  'game': 'JUEGOS',
+  'main': 'MAIN',
+  'game': 'GAME',
   'econ': 'NIVEL & ECONOMIA',
   'rg': 'REGISTRO',
   'sticker': 'STICKER',
@@ -17,7 +17,7 @@ let tags = {
   'nable': 'EN/DISABLE OPCIONES', 
   'nime': 'ANIME',
   'rnime': 'ANIME REACCION',
-  'dl': 'DESCARGAS',
+  'dl': 'DOWNLOAD',
   'tools': 'TOOLS',
   'fun': 'FUN',
   'cmd': 'DATABASE',
@@ -28,27 +28,18 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-◈ ━━━━━ *DyLux  ┃ ᴮᴼᵀ* ━━━━━ ◈
+🧚‍♂️𝐓𝐇𝐄 𝐐𝐔𝐄𝐄𝐍-𝐒𝐀𝐊𝐔𝐑𝐀_𝐌𝐃 𝐕2🧚‍♂️
  
-👋🏻 _Hola_ *%name*
-🧿 Nivel : *%level* 
-👥 Usuarios : %totalreg
-📈 Tiempo activo : %muptime
-─────────────
-▢ Crea tu propio bot 
-• https://youtu.be/xFqjKN1Qt80
-▢ Descarga *FGWhatsApp*
-• https://fgmods.xyz
-─────────────
-%readmore
-Ⓟ = Premium
-ⓓ = Diamantes
------  -----  -----  -----  -----
-  ≡ *LISTA DE MENUS*
+👋🏻 𝐔𝐒𝐄𝐑 : *%name* 
+🕗𝐑𝐔𝐍𝐓𝐈𝐌𝐄 : %muptime
+🥷𝐏𝐑𝐄𝐅𝐈𝐗 : .
+🔰𝐃𝐀𝐓𝐀𝐁𝐀𝐒𝐄 : 𝐥𝐢𝐧𝐮𝐱
+📟𝐒𝐘𝐒𝐓𝐀𝐌 : 𝐛𝐚𝐢𝐥𝐲𝐞𝐬
+📝𝐋𝐈𝐒𝐓-𝐌𝐄𝐍𝐔📅
 `.trimStart(),
-  header: '┌─⊷ *%category*',
-  body: '▢ %cmd %isdiamond %isPremium',
-  footer: '└───────────\n',
+  header: '┏━━━❮ *%category* ❯━━⦁⦁',
+  body: '✘ %cmd %isdiamond %isPremium',
+  footer: '┗━━━━━━━━━⦁⦁\n',
   after: `
 `,
 }
@@ -158,7 +149,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       ['⌬ Grupos', `${_p}gpdylux`]
     ],m, rpl)*/
   
-    m.react('📚') 
+    m.react('🧚‍♂️') 
     
   } catch (e) {
     conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error', m)
